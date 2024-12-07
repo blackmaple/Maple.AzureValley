@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Maple.AzureValley.Metadata/Maple.AzureValley.Metadata.csproj" />
+  <Project Path="Maple.AzureValley/Maple.AzureValley.csproj" />
+</Solution>
