@@ -1,7 +1,7 @@
 ﻿namespace Maple.AzureValley.Metadata
 {
-    public static class AzureValleyEnvironment
-    { 
-    
+    public class AzureValleyEnvironment(AzureValleyMetadata metadata)
+    {
+        public AzureValleyMetadata Metadata { get; } = metadata;
     }
 }
