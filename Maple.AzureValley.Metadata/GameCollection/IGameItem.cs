@@ -140,7 +140,7 @@ namespace Maple.AzureValley.Metadata
         {
             public string Id => GET_NAME().ToString()!;
             public string? Name => GET_LOCALIZED_NAME().ToString();
-            //public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
+            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.InventoryItems;
 
 

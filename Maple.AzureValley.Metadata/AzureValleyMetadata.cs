@@ -14,7 +14,6 @@ typeof(MonoCollectorClassInfo)
 
 
     [MonoCollectorType(typeof(GameData))]
-    //[MonoCollectorType(typeof(WorldItems))]
 
     [MonoCollectorType(typeof(InventoryItems))]
     [MonoCollectorType(typeof(InventoryItemsData))]

@@ -26,7 +26,7 @@ namespace Maple.AzureValley.GameService
         protected sealed override async ValueTask LoadGameDataAsync()
         {
             var gameEnv = await this.MonoTaskAsync(p => p.GetAzureValleyEnvironment()).ConfigureAwait(false);
-            await this.UITaskAsync(static (p, args) => args.FirstLoadResource(), gameEnv).ConfigureAwait(false);
+          //  await this.UITaskAsync(static (p, args) => args.LoadInventoryItems(), gameEnv).ConfigureAwait(false);
 
             var task0 = this.MonoTaskAsync(static (p, args) => args.LoadAutoUnlocks(), gameEnv);
             var task1 = this.MonoTaskAsync(static (p, args) => args.LoadBuffs(), gameEnv);
@@ -34,7 +34,9 @@ namespace Maple.AzureValley.GameService
             var task3 = this.MonoTaskAsync(static (p, args) => args.LoadConstructibles(), gameEnv);
             var task4 = this.MonoTaskAsync(static (p, args) => args.LoadFoods(), gameEnv);
             var task5 = this.MonoTaskAsync(static (p, args) => args.LoadHints(), gameEnv);
-            var task6 = this.MonoTaskAsync(static (p, args) => args.LoadInventoryItems(), gameEnv);
+
+            var task6 = this.UITaskAsync(static (p, args) => args.LoadInventoryItems(), gameEnv).AsTask();
+
             var task7 = this.MonoTaskAsync(static (p, args) => args.LoadPerks(), gameEnv);
             var task8 = this.MonoTaskAsync(static (p, args) => args.LoadRecipes(), gameEnv);
             var task9 = this.MonoTaskAsync(static (p, args) => args.LoadTokens(), gameEnv);

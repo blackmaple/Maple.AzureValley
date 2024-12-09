@@ -2,6 +2,8 @@
 using Maple.MonoGameAssistant.Core;
 using Maple.MonoGameAssistant.GameDTO;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 
 namespace Maple.AzureValley.Metadata
 {
@@ -168,24 +170,90 @@ namespace Maple.AzureValley.Metadata
 
         public static GameInventoryDisplayDTO[] GetGameInventoryDisplays(this AzureValleyEnvironment @this)
         {
+            //if (CacheInventoryItems.Count == 0)
+            //{
+            //    @this.LoadInventoryItems();
+            //}
             return [.. CacheInventoryItems];
         }
 
+        static bool TryGetPlayerInventoryItem(this AzureValleyEnvironment @this, ReadOnlySpan<char> objName, [MaybeNullWhen(false)] out ItemStack.Ptr_ItemStack itemStack)
+        {
+            Unsafe.SkipInit(out itemStack);
+            foreach (var stack in @this.Ptr_PlayerData.INVENTORY.M_ITEMS)
+            {
+                if (false == stack.Valid())
+                {
+                    continue;
+                }
+
+                var item = stack.ITEM;
+                if (false == item.Valid())
+                {
+                    continue;
+                }
+
+                var itemType = item.TYPE;
+                if (false == itemType.Valid())
+                {
+                    continue;
+                }
+
+                if (itemType.GET_NAME().AsReadOnlySpan().SequenceEqual(objName))
+                {
+                    itemStack = stack;
+                    return true;
+                }
+            }
+
+
+
+            return false;
+        }
         public static GameInventoryInfoDTO GetGameInventoryInfo(this AzureValleyEnvironment @this, GameInventoryObjectDTO objectDTO)
         {
-            var ptr_player = @this.Ptr_PlayerInventory.PLAYER;
-            var ptr_localPlayer = @this.Metadata.LocalPlayerController.IsFrom(ptr_player);
-            @this.Logger.LogInformation("LocalPlayerController:{p}", ptr_localPlayer.ToString());
+            //var ptr_player = @this.Ptr_PlayerInventory.PLAYER;
+            //var ptr_localPlayer = @this.Metadata.LocalPlayerController.IsFrom(ptr_player);
+            //@this.Logger.LogInformation("LocalPlayerController:{p}", ptr_localPlayer.ToString());
+            //var ptr_inventory = ptr_localPlayer.GET_INVENTORY();
+            //var data_inventory = @this.Ptr_PlayerData.INVENTORY;
+            //@this.Logger.LogInformation("{p1}:{p2}", ptr_inventory.ToString(), data_inventory.ToString());
 
-            var ptr_inventory = ptr_localPlayer.GET_INVENTORY();
-            var data_inventory = @this.Ptr_PlayerData.INVENTORY;
-            @this.Logger.LogInformation("{p1}:{p2}", ptr_inventory.ToString(), data_inventory.ToString());
-            return GameException.Throw<GameInventoryInfoDTO>("GetGameInventoryInfo");
+            if (@this.TryGetPlayerInventoryItem(objectDTO.InventoryObject, out var itemStack))
+            {
+                return new GameInventoryInfoDTO() { ObjectId = objectDTO.InventoryObject, InventoryCount = itemStack.AMOUNT };
+            }
+            return new GameInventoryInfoDTO() { ObjectId = objectDTO.InventoryObject, InventoryCount = 0 };
+        }
+
+        static bool TryGetInventoryDbItem(this AzureValleyEnvironment @this, ReadOnlySpan<char> objName, [MaybeNullWhen(false)] out InventoryItemsData.Ptr_InventoryItemsData itemsData)
+        {
+            Unsafe.SkipInit(out itemsData);
+            foreach (var item in @this.Ptr_GameData.INVENTORY_ITEMS_DB.DATA_ARRAY)
+            {
+                if (item.GET_NAME().AsReadOnlySpan().SequenceEqual(objName))
+                {
+                    itemsData = item;
+                    return true;
+                }
+            }
+            return false;
         }
 
         public static GameInventoryInfoDTO UpdateGameInventoryInfo(this AzureValleyEnvironment @this, GameInventoryModifyDTO modifyDTO)
         {
-            return GameException.Throw<GameInventoryInfoDTO>("UpdateGameInventoryInfo");
+            if (@this.TryGetInventoryDbItem(modifyDTO.InventoryObject, out var itemsData))
+            {
+                if (@this.TryGetPlayerInventoryItem(modifyDTO.InventoryObject, out var itemStack))
+                {
+                    @this.Ptr_PlayerInventory.TAKE_ITEM_FROM_PLAYER_00(itemStack.ITEM, itemStack.AMOUNT, false);
+                }
+                @this.Ptr_PlayerInventory.GIVE_PLAYER_ITEM_00(itemsData, modifyDTO.InventoryCount);
+                 
+
+                return new GameInventoryInfoDTO() { ObjectId = modifyDTO.InventoryObject, InventoryCount = modifyDTO.InventoryCount };
+            }
+            return GameException.Throw<GameInventoryInfoDTO>($"NOT FOUND:{modifyDTO.InventoryObject}");
         }
 
 
