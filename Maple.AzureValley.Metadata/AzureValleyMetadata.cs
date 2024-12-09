@@ -54,7 +54,17 @@ typeof(MonoCollectorClassInfo)
 
 
 
+    [MonoCollectorType(typeof(PlayersManager))]
+    [MonoCollectorType(typeof(LocalPlayerController))]
+    [MonoCollectorType(typeof(PlayerInventory))]
+    [MonoCollectorType(typeof(Inventory))]
+    [MonoCollectorType(typeof(ItemStack))]
+    [MonoCollectorType(typeof(InventoryItem))]
+    [MonoCollectorType(typeof(ItemVariation))]
 
+    [MonoCollectorType(typeof(PlayerData))]
+
+    
     public partial class AzureValleyMetadata
     {
 

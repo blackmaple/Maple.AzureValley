@@ -57,5 +57,22 @@ namespace Maple.AzureValley.GameService
 
         }
 
+        public sealed override async ValueTask<GameInventoryDisplayDTO[]> GetListInventoryDisplayAsync()
+        {
+            var gameEnv = await this.GetAzureValleyEnvironment().ConfigureAwait(false);
+            return await this.MonoTaskAsync(static (p, args) => args.GetGameInventoryDisplays(), gameEnv).ConfigureAwait(false);
+        }
+        public sealed override async ValueTask<GameInventoryInfoDTO> GetInventoryInfoAsync(GameInventoryObjectDTO inventoryObjectDTO)
+        {
+            var gameEnv = await this.GetAzureValleyEnvironmentThrowIfNotLoaded().ConfigureAwait(false);
+            return await this.MonoTaskAsync(static (p, args) => args.gameEnv.GetGameInventoryInfo(args.inventoryObjectDTO), (gameEnv, inventoryObjectDTO)).ConfigureAwait(false);
+        }
+        public sealed override async ValueTask<GameInventoryInfoDTO> UpdateInventoryInfoAsync(GameInventoryModifyDTO inventoryObjectDTO)
+        {
+            var gameEnv = await this.GetAzureValleyEnvironmentThrowIfNotLoaded().ConfigureAwait(false);
+            return await this.MonoTaskAsync(static (p, args) => args.gameEnv.UpdateGameInventoryInfo(args.inventoryObjectDTO), (gameEnv, inventoryObjectDTO)).ConfigureAwait(false);
+        }
+
+
     }
 }

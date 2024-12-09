@@ -43,14 +43,14 @@ namespace Maple.AzureValley.Metadata
 
         public static void FirstLoadResource(this AzureValleyEnvironment @this)
         {
-           
+
             @this.FirstEnumResource<AutoUnlocks.Ptr_AutoUnlocks, AutoUnlocksData.Ptr_AutoUnlocksData>(@this.Ptr_GameData.AUTO_UNLOCKS_DB);
             @this.FirstEnumResource<Buffs.Ptr_Buffs, BuffsData.Ptr_BuffsData>(@this.Ptr_GameData.BUFFS_DB);
             @this.FirstEnumResource<Constants.Ptr_Constants, ConstantsData.Ptr_ConstantsData>(@this.Ptr_GameData.CONSTANTS_DB);
             @this.FirstEnumResource<Constructibles.Ptr_Constructibles, ConstructiblesData.Ptr_ConstructiblesData>(@this.Ptr_GameData.CONSTRUCTIBLES_DB);
-           
+
             @this.FirstEnumResource<Foods.Ptr_Foods, FoodsData.Ptr_FoodsData>(@this.Ptr_GameData.FOODS_DB);
-           
+
             @this.FirstEnumResource<Hints.Ptr_Hints, HintsData.Ptr_HintsData>(@this.Ptr_GameData.HINTS_DB);
             @this.FirstEnumResource<InventoryItems.Ptr_InventoryItems, InventoryItemsData.Ptr_InventoryItemsData>(@this.Ptr_GameData.INVENTORY_ITEMS_DB);
             @this.FirstEnumResource<Perks.Ptr_Perks, PerksData.Ptr_PerksData>(@this.Ptr_GameData.PERKS_DB);
@@ -158,11 +158,36 @@ namespace Maple.AzureValley.Metadata
         {
             foreach (var ptrItem in items.Data)
             {
-               _ = ptrItem.Name;
+                _ = ptrItem.Name;
                 _ = ptrItem.Description;
                 return;
             }
         }
+
+
+
+        public static GameInventoryDisplayDTO[] GetGameInventoryDisplays(this AzureValleyEnvironment @this)
+        {
+            return [.. CacheInventoryItems];
+        }
+
+        public static GameInventoryInfoDTO GetGameInventoryInfo(this AzureValleyEnvironment @this, GameInventoryObjectDTO objectDTO)
+        {
+            var ptr_player = @this.Ptr_PlayerInventory.PLAYER;
+            var ptr_localPlayer = @this.Metadata.LocalPlayerController.IsFrom(ptr_player);
+            @this.Logger.LogInformation("LocalPlayerController:{p}", ptr_localPlayer.ToString());
+
+            var ptr_inventory = ptr_localPlayer.GET_INVENTORY();
+            var data_inventory = @this.Ptr_PlayerData.INVENTORY;
+            @this.Logger.LogInformation("{p1}:{p2}", ptr_inventory.ToString(), data_inventory.ToString());
+            return GameException.Throw<GameInventoryInfoDTO>("GetGameInventoryInfo");
+        }
+
+        public static GameInventoryInfoDTO UpdateGameInventoryInfo(this AzureValleyEnvironment @this, GameInventoryModifyDTO modifyDTO)
+        {
+            return GameException.Throw<GameInventoryInfoDTO>("UpdateGameInventoryInfo");
+        }
+
 
     }
 

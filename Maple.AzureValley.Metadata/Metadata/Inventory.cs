@@ -1,4 +1,5 @@
 
+
 using Maple.MonoGameAssistant.Core;
 using Maple.MonoGameAssistant.MonoCollectorDataV2;
 using System;
@@ -33,7 +34,7 @@ namespace Maple.AzureValley.Metadata
     // [MonoCollectorSearchFieldAttribute(typeof(nint),"OnNotifyRemovedFromInventory", "ON_NOTIFY_REMOVED_FROM_INVENTORY")]
 
     // class 0x30 ItemStack[] m_items
-    // [MonoCollectorSearchFieldAttribute(typeof(nint),"m_items", "M_ITEMS")]
+      [MonoCollectorSearchFieldAttribute(typeof(PMonoArray<ItemStack.Ptr_ItemStack>),"m_items", "M_ITEMS")]
 
     // class 0x38 ItemFilter[] m_filters
     // [MonoCollectorSearchFieldAttribute(typeof(nint),"m_filters", "M_FILTERS")]
