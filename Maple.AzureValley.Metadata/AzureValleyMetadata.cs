@@ -12,6 +12,49 @@ typeof(MonoRuntimeContext),
 typeof(MonoCollectorClassInfo)
 )]
 
+
+    [MonoCollectorType(typeof(GameData))]
+    //[MonoCollectorType(typeof(WorldItems))]
+
+    [MonoCollectorType(typeof(InventoryItems))]
+    [MonoCollectorType(typeof(InventoryItemsData))]
+
+    [MonoCollectorType(typeof(Recipes))]
+    [MonoCollectorType(typeof(RecipesData))]
+
+    [MonoCollectorType(typeof(Constants))]
+    [MonoCollectorType(typeof(ConstantsData))]
+
+    [MonoCollectorType(typeof(Buffs))]
+    [MonoCollectorType(typeof(BuffsData))]
+
+    [MonoCollectorType(typeof(Foods))]
+    [MonoCollectorType(typeof(FoodsData))]
+
+    [MonoCollectorType(typeof(Perks))]
+    [MonoCollectorType(typeof(PerksData))]
+
+    [MonoCollectorType(typeof(Hints))]
+    [MonoCollectorType(typeof(HintsData))]
+
+    [MonoCollectorType(typeof(Constructibles))]
+    [MonoCollectorType(typeof(ConstructiblesData))]
+
+    [MonoCollectorType(typeof(AutoUnlocks))]
+    [MonoCollectorType(typeof(AutoUnlocksData))]
+
+    [MonoCollectorType(typeof(Tokens))]
+    [MonoCollectorType(typeof(TokensData))]
+
+    [MonoCollectorType(typeof(WorldItems))]
+    [MonoCollectorType(typeof(WorldItemsData))]
+
+
+    [MonoCollectorType(typeof(GameState))]
+
+
+
+
     public partial class AzureValleyMetadata
     {
 

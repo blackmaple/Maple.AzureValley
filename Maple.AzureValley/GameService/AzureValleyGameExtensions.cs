@@ -14,7 +14,7 @@ namespace Maple.TstdGame.GameService
         {
             _ = RunWebApiServiceAsync();
 
-            static async Task RunWebApiServiceAsync(int millisecondsDelay = 15 * 1000)
+            static async Task RunWebApiServiceAsync(int millisecondsDelay = 25 * 1000)
             {
 
                 var webapp = WebApiServiceExtensions.AsRunWebApiService(static p =>
