@@ -134,126 +134,126 @@ namespace Maple.AzureValley.Metadata
         extern PMonoString GET_NAME();
 
 
-        /// <summary>
-        ///   System.String GetLocalizedName()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
-        extern PMonoString GET_LOCALIZED_NAME();
+        ///// <summary>
+        /////   System.String GetLocalizedName()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
+        //extern PMonoString GET_LOCALIZED_NAME();
 
 
-        /// <summary>
-        ///   System.String GetTranslationDescriptionTag()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationDescriptionTag")]
-        ///  extern nint GET_TRANSLATION_DESCRIPTION_TAG ();
+        ///// <summary>
+        /////   System.String GetTranslationDescriptionTag()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationDescriptionTag")]
+        /////  extern nint GET_TRANSLATION_DESCRIPTION_TAG ();
 
 
-        /// <summary>
-        ///   System.String GetTranslationNameTag()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
-        extern PMonoString GET_TRANSLATION_NAME_TAG();
+        ///// <summary>
+        /////   System.String GetTranslationNameTag()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
+        //extern PMonoString GET_TRANSLATION_NAME_TAG();
 
 
-        /// <summary>
-        ///   System.Boolean IsMatch(System.String searchString)
-        /// </summary>
-        /// <param name="searchString">class System.String</param>
-        /// <returns>struct System.Boolean</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("IsMatch")]
-        ///  extern System.Boolean IS_MATCH (nint searchString);
+        ///// <summary>
+        /////   System.Boolean IsMatch(System.String searchString)
+        ///// </summary>
+        ///// <param name="searchString">class System.String</param>
+        ///// <returns>struct System.Boolean</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("IsMatch")]
+        /////  extern System.Boolean IS_MATCH (nint searchString);
 
 
-        /// <summary>
-        ///   System.Void set_Hotbarimage(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Hotbarimage")]
-        ///  extern void SET_HOTBARIMAGE (nint value);
+        ///// <summary>
+        /////   System.Void set_Hotbarimage(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Hotbarimage")]
+        /////  extern void SET_HOTBARIMAGE (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Hotbarvideo(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Hotbarvideo")]
-        ///  extern void SET_HOTBARVIDEO (nint value);
+        ///// <summary>
+        /////   System.Void set_Hotbarvideo(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Hotbarvideo")]
+        /////  extern void SET_HOTBARVIDEO (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Imagewhenunlocked(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Imagewhenunlocked")]
-        ///  extern void SET_IMAGEWHENUNLOCKED (nint value);
+        ///// <summary>
+        /////   System.Void set_Imagewhenunlocked(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Imagewhenunlocked")]
+        /////  extern void SET_IMAGEWHENUNLOCKED (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Inventoryimage(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Inventoryimage")]
-        ///  extern void SET_INVENTORYIMAGE (nint value);
+        ///// <summary>
+        /////   System.Void set_Inventoryimage(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Inventoryimage")]
+        /////  extern void SET_INVENTORYIMAGE (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Name(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Name")]
-        ///  extern void SET_NAME (nint value);
+        ///// <summary>
+        /////   System.Void set_Name(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Name")]
+        /////  extern void SET_NAME (nint value);
 
 
 
-        /// <summary>
-        ///   System.String GetLocalizedDescription()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_HintsData))]
-        extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
+        ///// <summary>
+        /////   System.String GetLocalizedDescription()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_HintsData))]
+        //extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
 
 
-        /// <summary>
-        ///   System.String GetLocalizedDescription(System.Object[] args)
-        /// </summary>
-        /// <param name="args">class System.Object[]</param>
-        /// <returns>class System.String</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_HintsData))]
-        ///  extern nint GET_LOCALIZED_DESCRIPTION_01 (nint args);
+        ///// <summary>
+        /////   System.String GetLocalizedDescription(System.Object[] args)
+        ///// </summary>
+        ///// <param name="args">class System.Object[]</param>
+        ///// <returns>class System.String</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_HintsData))]
+        /////  extern nint GET_LOCALIZED_DESCRIPTION_01 (nint args);
 
 
-        public static partial class Search_HintsData
-        {
-            /// 
-            ///     
+        //public static partial class Search_HintsData
+        //{
+        //    /// 
+        //    ///     
 
-            /// <summary>
-            ///   System.String GetLocalizedDescription()
-            public static bool GET_LOCALIZED_DESCRIPTION_00(Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
-                => Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription");
-            ///     
-            ///  
-            /// 
+        //    /// <summary>
+        //    ///   System.String GetLocalizedDescription()
+        //    public static bool GET_LOCALIZED_DESCRIPTION_00(Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
+        //        => Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription");
+        //    ///     
+        //    ///  
+        //    /// 
 
 
-            /// <summary>
-            ///   System.String GetLocalizedDescription(System.Object[] args)
-            /// </summary>
-            /// public static bool GET_LOCALIZED_DESCRIPTION_01 (Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
-            ///     =>  Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription", "System.Object[]");
-            ///     
-            ///  
-            /// 
-            /// 
-        }
+        //    /// <summary>
+        //    ///   System.String GetLocalizedDescription(System.Object[] args)
+        //    /// </summary>
+        //    /// public static bool GET_LOCALIZED_DESCRIPTION_01 (Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
+        //    ///     =>  Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription", "System.Object[]");
+        //    ///     
+        //    ///  
+        //    /// 
+        //    /// 
+        //}
 
     }
 

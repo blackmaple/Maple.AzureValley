@@ -9,11 +9,11 @@ namespace Maple.AzureValley.Metadata
     public interface IGameItemData
     {
         string Id { get; }
-        string? Name { get; }
-        string? Description { get; }
+        public string? Name => string.Empty;
+        public string? Description => string.Empty;
         GameItemType Type { get; }
 
-        string? Tag { get; } 
+
     }
 
     partial class AutoUnlocks
@@ -28,10 +28,8 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_AutoUnlocksData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
-            public GameItemType Type => GameItemType.AutoUnlocks; 
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+            public GameItemType Type => GameItemType.AutoUnlocks;
+
 
         }
     }
@@ -49,10 +47,8 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_BuffsData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Buffs;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -70,10 +66,8 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_ConstantsData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Constants;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -91,10 +85,8 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_FoodsData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => string.Empty;// GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Foods;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -111,10 +103,8 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_ConstructiblesData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Constructibles;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -131,10 +121,8 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_HintsData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Hints;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -152,9 +140,9 @@ namespace Maple.AzureValley.Metadata
         {
             public string Id => GET_NAME().ToString()!;
             public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
+            //public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.InventoryItems;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -171,10 +159,8 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_PerksData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Perks;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -191,10 +177,10 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_RecipesData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
+            //public string? Name => GET_LOCALIZED_NAME().ToString();
+            //public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Recipes;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+
 
         }
     }
@@ -212,11 +198,7 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_TokensData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
             public GameItemType Type => GameItemType.Tokens;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
-
         }
     }
 
@@ -233,10 +215,9 @@ namespace Maple.AzureValley.Metadata
         partial struct Ptr_WorldItemsData : IGameItemData
         {
             public string Id => GET_NAME().ToString()!;
-            public string? Name => GET_LOCALIZED_NAME().ToString();
-            public string? Description => GET_LOCALIZED_DESCRIPTION_00().ToString();
-            public GameItemType Type => GameItemType.WorldItems;
-            public string? Tag => GET_TRANSLATION_NAME_TAG().ToString();
+            //public string? Name => GET_LOCALIZED_NAME().ToString();
+             public GameItemType Type => GameItemType.WorldItems;
+
 
         }
     }

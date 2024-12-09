@@ -193,168 +193,168 @@ namespace Maple.AzureValley.Metadata
         ///   System.String GetLocalizedName()
         /// </summary>
         /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
-        extern PMonoString GET_LOCALIZED_NAME();
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
+        //extern PMonoString GET_LOCALIZED_NAME();
 
 
-        /// <summary>
-        ///   System.String GetTranslationDescriptionTag()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationDescriptionTag")]
-        ///  extern nint GET_TRANSLATION_DESCRIPTION_TAG ();
+        ///// <summary>
+        /////   System.String GetTranslationDescriptionTag()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationDescriptionTag")]
+        /////  extern nint GET_TRANSLATION_DESCRIPTION_TAG ();
 
 
-        /// <summary>
-        ///   System.String GetTranslationNameTag()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
-        extern PMonoString GET_TRANSLATION_NAME_TAG();
+        ///// <summary>
+        /////   System.String GetTranslationNameTag()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
+        //extern PMonoString GET_TRANSLATION_NAME_TAG();
 
 
-        /// <summary>
-        ///   System.Boolean IsMatch(System.String searchString)
-        /// </summary>
-        /// <param name="searchString">class System.String</param>
-        /// <returns>struct System.Boolean</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("IsMatch")]
-        ///  extern System.Boolean IS_MATCH (nint searchString);
+        ///// <summary>
+        /////   System.Boolean IsMatch(System.String searchString)
+        ///// </summary>
+        ///// <param name="searchString">class System.String</param>
+        ///// <returns>struct System.Boolean</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("IsMatch")]
+        /////  extern System.Boolean IS_MATCH (nint searchString);
 
 
-        /// <summary>
-        ///   System.Void set_Columnid(System.Int32 value)
-        /// </summary>
-        /// <param name="value">struct System.Int32</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Columnid")]
-        ///  extern void SET_COLUMNID (System.Int32 value);
+        ///// <summary>
+        /////   System.Void set_Columnid(System.Int32 value)
+        ///// </summary>
+        ///// <param name="value">struct System.Int32</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Columnid")]
+        /////  extern void SET_COLUMNID (System.Int32 value);
 
 
-        /// <summary>
-        ///   System.Void set_Displayname(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Displayname")]
-        ///  extern void SET_DISPLAYNAME (nint value);
+        ///// <summary>
+        /////   System.Void set_Displayname(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Displayname")]
+        /////  extern void SET_DISPLAYNAME (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Icon(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Icon")]
-        ///  extern void SET_ICON (nint value);
+        ///// <summary>
+        /////   System.Void set_Icon(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Icon")]
+        /////  extern void SET_ICON (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Menu(System.String[] value)
-        /// </summary>
-        /// <param name="value">class System.String[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Menu")]
-        ///  extern void SET_MENU (nint value);
+        ///// <summary>
+        /////   System.Void set_Menu(System.String[] value)
+        ///// </summary>
+        ///// <param name="value">class System.String[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Menu")]
+        /////  extern void SET_MENU (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Name(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Name")]
-        ///  extern void SET_NAME (nint value);
+        ///// <summary>
+        /////   System.Void set_Name(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Name")]
+        /////  extern void SET_NAME (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Parentsand(System.String[] value)
-        /// </summary>
-        /// <param name="value">class System.String[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Parentsand")]
-        ///  extern void SET_PARENTSAND (nint value);
+        ///// <summary>
+        /////   System.Void set_Parentsand(System.String[] value)
+        ///// </summary>
+        ///// <param name="value">class System.String[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Parentsand")]
+        /////  extern void SET_PARENTSAND (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Parentsor(System.String[] value)
-        /// </summary>
-        /// <param name="value">class System.String[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Parentsor")]
-        ///  extern void SET_PARENTSOR (nint value);
+        ///// <summary>
+        /////   System.Void set_Parentsor(System.String[] value)
+        ///// </summary>
+        ///// <param name="value">class System.String[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Parentsor")]
+        /////  extern void SET_PARENTSOR (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Tokenamount(System.Int32[] value)
-        /// </summary>
-        /// <param name="value">class System.Int32[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Tokenamount")]
-        ///  extern void SET_TOKENAMOUNT (nint value);
+        ///// <summary>
+        /////   System.Void set_Tokenamount(System.Int32[] value)
+        ///// </summary>
+        ///// <param name="value">class System.Int32[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Tokenamount")]
+        /////  extern void SET_TOKENAMOUNT (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Tokens(System.String[] value)
-        /// </summary>
-        /// <param name="value">class System.String[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Tokens")]
-        ///  extern void SET_TOKENS (nint value);
+        ///// <summary>
+        /////   System.Void set_Tokens(System.String[] value)
+        ///// </summary>
+        ///// <param name="value">class System.String[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Tokens")]
+        /////  extern void SET_TOKENS (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Unlocksdrawing(System.String[] value)
-        /// </summary>
-        /// <param name="value">class System.String[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Unlocksdrawing")]
-        ///  extern void SET_UNLOCKSDRAWING (nint value);
+        ///// <summary>
+        /////   System.Void set_Unlocksdrawing(System.String[] value)
+        ///// </summary>
+        ///// <param name="value">class System.String[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Unlocksdrawing")]
+        /////  extern void SET_UNLOCKSDRAWING (nint value);
 
 
 
-        /// <summary>
-        ///   System.String GetLocalizedDescription()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_PerksData))]
-        extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
+        ///// <summary>
+        /////   System.String GetLocalizedDescription()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_PerksData))]
+        //extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
 
 
-        /// <summary>
-        ///   System.String GetLocalizedDescription(System.Object[] args)
-        /// </summary>
-        /// <param name="args">class System.Object[]</param>
-        /// <returns>class System.String</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_PerksData))]
-        ///  extern nint GET_LOCALIZED_DESCRIPTION_01 (nint args);
+        ///// <summary>
+        /////   System.String GetLocalizedDescription(System.Object[] args)
+        ///// </summary>
+        ///// <param name="args">class System.Object[]</param>
+        ///// <returns>class System.String</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_PerksData))]
+        /////  extern nint GET_LOCALIZED_DESCRIPTION_01 (nint args);
 
 
-        public static partial class Search_PerksData
-        {
-            /// 
-            ///     
+        //public static partial class Search_PerksData
+        //{
+        //    /// 
+        //    ///     
 
-            /// <summary>
-            ///   System.String GetLocalizedDescription()
-            /// </summary>
-            public static bool GET_LOCALIZED_DESCRIPTION_00(Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
-                => Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription");
-            ///     
-            ///  
-            /// 
+        //    /// <summary>
+        //    ///   System.String GetLocalizedDescription()
+        //    /// </summary>
+        //    public static bool GET_LOCALIZED_DESCRIPTION_00(Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
+        //        => Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription");
+        //    ///     
+        //    ///  
+        //    /// 
 
 
-            /// <summary>
-            ///   System.String GetLocalizedDescription(System.Object[] args)
-            /// </summary>
-            /// public static bool GET_LOCALIZED_DESCRIPTION_01 (Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
-            ///     =>  Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription", "System.Object[]");
-            ///     
-            ///  
-            /// 
-            /// 
-        }
+        //    /// <summary>
+        //    ///   System.String GetLocalizedDescription(System.Object[] args)
+        //    /// </summary>
+        //    /// public static bool GET_LOCALIZED_DESCRIPTION_01 (Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
+        //    ///     =>  Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription", "System.Object[]");
+        //    ///     
+        //    ///  
+        //    /// 
+        //    /// 
+        //}
 
     }
 

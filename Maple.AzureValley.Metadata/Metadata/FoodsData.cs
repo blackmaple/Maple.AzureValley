@@ -86,175 +86,175 @@ namespace Maple.AzureValley.Metadata
 
 
 
-        /// <summary>
-        ///   System.Void .ctor()
-        /// </summary>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute(".ctor")]
-        ///  extern void .CTOR ();
+        ///// <summary>
+        /////   System.Void .ctor()
+        ///// </summary>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute(".ctor")]
+        /////  extern void .CTOR ();
 
 
-        /// <summary>
-        ///   System.String[] get_Buffs()
-        /// </summary>
-        /// <returns>class System.String[]</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Buffs")]
-        ///  extern nint GET_BUFFS ();
+        ///// <summary>
+        /////   System.String[] get_Buffs()
+        ///// </summary>
+        ///// <returns>class System.String[]</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Buffs")]
+        /////  extern nint GET_BUFFS ();
 
 
-        /// <summary>
-        ///   System.String get_Displayname()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Displayname")]
-        ///  extern nint GET_DISPLAYNAME ();
+        ///// <summary>
+        /////   System.String get_Displayname()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Displayname")]
+        /////  extern nint GET_DISPLAYNAME ();
 
 
-        /// <summary>
-        ///   System.Int32[] get_Ingredientamounts()
-        /// </summary>
-        /// <returns>class System.Int32[]</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Ingredientamounts")]
-        ///  extern nint GET_INGREDIENTAMOUNTS ();
+        ///// <summary>
+        /////   System.Int32[] get_Ingredientamounts()
+        ///// </summary>
+        ///// <returns>class System.Int32[]</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Ingredientamounts")]
+        /////  extern nint GET_INGREDIENTAMOUNTS ();
 
 
-        /// <summary>
-        ///   System.String[] get_Ingredients()
-        /// </summary>
-        /// <returns>class System.String[]</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Ingredients")]
-        ///  extern nint GET_INGREDIENTS ();
+        ///// <summary>
+        /////   System.String[] get_Ingredients()
+        ///// </summary>
+        ///// <returns>class System.String[]</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Ingredients")]
+        /////  extern nint GET_INGREDIENTS ();
 
 
-        /// <summary>
-        ///   System.String get_Name()
-        /// </summary>
-        /// <returns>class System.String</returns>
+        ///// <summary>
+        /////   System.String get_Name()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
         [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("get_Name")]
         extern PMonoString GET_NAME();
 
 
-        /// <summary>
-        ///   UnityEngine.Localization.LocalizedString GetLocalizedName()
-        /// </summary>
-        /// <returns>class UnityEngine.Localization.LocalizedString</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
-        extern PMonoString GET_LOCALIZED_NAME();
+        ///// <summary>
+        /////   UnityEngine.Localization.LocalizedString GetLocalizedName()
+        ///// </summary>
+        ///// <returns>class UnityEngine.Localization.LocalizedString</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
+        //extern PMonoString GET_LOCALIZED_NAME();
 
 
-        /// <summary>
-        ///   System.String GetTranslationDescriptionTag()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationDescriptionTag")]
-        ///  extern nint GET_TRANSLATION_DESCRIPTION_TAG ();
+        ///// <summary>
+        /////   System.String GetTranslationDescriptionTag()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationDescriptionTag")]
+        /////  extern nint GET_TRANSLATION_DESCRIPTION_TAG ();
 
 
-        /// <summary>
-        ///   System.String GetTranslationNameTag()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
-        extern PMonoString GET_TRANSLATION_NAME_TAG();
+        ///// <summary>
+        /////   System.String GetTranslationNameTag()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
+        //extern PMonoString GET_TRANSLATION_NAME_TAG();
 
 
-        /// <summary>
-        ///   System.Boolean IsMatch(System.String searchString)
-        /// </summary>
-        /// <param name="searchString">class System.String</param>
-        /// <returns>struct System.Boolean</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("IsMatch")]
-        ///  extern System.Boolean IS_MATCH (nint searchString);
+        ///// <summary>
+        /////   System.Boolean IsMatch(System.String searchString)
+        ///// </summary>
+        ///// <param name="searchString">class System.String</param>
+        ///// <returns>struct System.Boolean</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("IsMatch")]
+        /////  extern System.Boolean IS_MATCH (nint searchString);
 
 
-        /// <summary>
-        ///   System.Void set_Buffs(System.String[] value)
-        /// </summary>
-        /// <param name="value">class System.String[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Buffs")]
-        ///  extern void SET_BUFFS (nint value);
+        ///// <summary>
+        /////   System.Void set_Buffs(System.String[] value)
+        ///// </summary>
+        ///// <param name="value">class System.String[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Buffs")]
+        /////  extern void SET_BUFFS (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Displayname(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Displayname")]
-        ///  extern void SET_DISPLAYNAME (nint value);
+        ///// <summary>
+        /////   System.Void set_Displayname(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Displayname")]
+        /////  extern void SET_DISPLAYNAME (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Ingredientamounts(System.Int32[] value)
-        /// </summary>
-        /// <param name="value">class System.Int32[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Ingredientamounts")]
-        ///  extern void SET_INGREDIENTAMOUNTS (nint value);
+        ///// <summary>
+        /////   System.Void set_Ingredientamounts(System.Int32[] value)
+        ///// </summary>
+        ///// <param name="value">class System.Int32[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Ingredientamounts")]
+        /////  extern void SET_INGREDIENTAMOUNTS (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Ingredients(System.String[] value)
-        /// </summary>
-        /// <param name="value">class System.String[]</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Ingredients")]
-        ///  extern void SET_INGREDIENTS (nint value);
+        ///// <summary>
+        /////   System.Void set_Ingredients(System.String[] value)
+        ///// </summary>
+        ///// <param name="value">class System.String[]</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Ingredients")]
+        /////  extern void SET_INGREDIENTS (nint value);
 
 
-        /// <summary>
-        ///   System.Void set_Name(System.String value)
-        /// </summary>
-        /// <param name="value">class System.String</param>
-        /// <returns>struct System.Void</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Name")]
-        ///  extern void SET_NAME (nint value);
+        ///// <summary>
+        /////   System.Void set_Name(System.String value)
+        ///// </summary>
+        ///// <param name="value">class System.String</param>
+        ///// <returns>struct System.Void</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("set_Name")]
+        /////  extern void SET_NAME (nint value);
 
 
 
-        /// <summary>
-        ///   System.String GetLocalizedDescription()
-        /// </summary>
-        /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_FoodsData))]
-        extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
+        ///// <summary>
+        /////   System.String GetLocalizedDescription()
+        ///// </summary>
+        ///// <returns>class System.String</returns>
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_FoodsData))]
+        //extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
 
 
-        /// <summary>
-        ///   System.String GetLocalizedDescription(System.Object[] args)
-        /// </summary>
-        /// <param name="args">class System.Object[]</param>
-        /// <returns>class System.String</returns>
-        /// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_FoodsData))]
-        ///  extern nint GET_LOCALIZED_DESCRIPTION_01 (nint args);
+        ///// <summary>
+        /////   System.String GetLocalizedDescription(System.Object[] args)
+        ///// </summary>
+        ///// <param name="args">class System.Object[]</param>
+        ///// <returns>class System.String</returns>
+        ///// [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_FoodsData))]
+        /////  extern nint GET_LOCALIZED_DESCRIPTION_01 (nint args);
 
 
-        public static partial class Search_FoodsData
-        {
-            /// 
-            ///     
+        //public static partial class Search_FoodsData
+        //{
+        //    /// 
+        //    ///     
 
-            /// <summary>
-            ///   System.String GetLocalizedDescription()
-            /// </summary>
-            public static bool GET_LOCALIZED_DESCRIPTION_00(Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
-                => Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription");
-            ///     
-            ///  
-            /// 
+        //    /// <summary>
+        //    ///   System.String GetLocalizedDescription()
+        //    /// </summary>
+        //    public static bool GET_LOCALIZED_DESCRIPTION_00(Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
+        //        => Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription");
+        //    ///     
+        //    ///  
+        //    /// 
 
 
-            /// <summary>
-            ///   System.String GetLocalizedDescription(System.Object[] args)
-            /// </summary>
-            /// public static bool GET_LOCALIZED_DESCRIPTION_01 (Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
-            ///     =>  Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription", "System.Object[]");
-            ///     
-            ///  
-            /// 
-            /// 
-        }
+        //    /// <summary>
+        //    ///   System.String GetLocalizedDescription(System.Object[] args)
+        //    /// </summary>
+        //    /// public static bool GET_LOCALIZED_DESCRIPTION_01 (Maple.MonoGameAssistant.Model.MonoMethodInfoDTO monoMethodInfoDTO)
+        //    ///     =>  Maple.MonoGameAssistant.MonoCollector.MonoCollectorExtensions.SearchMonoMethodInfo(monoMethodInfoDTO, "GetLocalizedDescription", "System.Object[]");
+        //    ///     
+        //    ///  
+        //    /// 
+        //    /// 
+        //}
 
     }
 

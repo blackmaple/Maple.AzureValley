@@ -215,8 +215,8 @@ namespace Maple.AzureValley.Metadata
         ///   System.String GetLocalizedName()
         /// </summary>
         /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
-        extern PMonoString GET_LOCALIZED_NAME();
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedName")]
+        //extern PMonoString GET_LOCALIZED_NAME();
 
 
         /// <summary>
@@ -231,8 +231,8 @@ namespace Maple.AzureValley.Metadata
         ///   System.String GetTranslationNameTag()
         /// </summary>
         /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
-        extern PMonoString GET_TRANSLATION_NAME_TAG();
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetTranslationNameTag")]
+        //extern PMonoString GET_TRANSLATION_NAME_TAG();
 
 
         /// <summary>
@@ -357,8 +357,8 @@ namespace Maple.AzureValley.Metadata
         ///   System.String GetLocalizedDescription()
         /// </summary>
         /// <returns>class System.String</returns>
-        [Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_AutoUnlocksData))]
-        extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
+        //[Maple.MonoGameAssistant.MonoCollectorDataV2.MonoCollectorMethodAttribute("GetLocalizedDescription", Search = typeof(Search_AutoUnlocksData))]
+        //extern PMonoString GET_LOCALIZED_DESCRIPTION_00();
 
 
         /// <summary>

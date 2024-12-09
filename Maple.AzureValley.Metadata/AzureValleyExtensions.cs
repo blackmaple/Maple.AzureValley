@@ -141,9 +141,6 @@ namespace Maple.AzureValley.Metadata
                     DisplayName = ptrItem.Name,
                     DisplayDesc = ptrItem.Description,
                     DisplayCategory = ptrItem.Type.ToString(),
-                    ItemAttributes = [
-                         new GameValueInfoDTO(){ ObjectId=ptrItem.Id,DisplayName = "Tag" ,DisplayValue = ptrItem.Tag,CanPreview =true },
-                        ]
                 };
                 @this.Logger.LogInformation("{id}=>{name}=>{desc}=>{category}",
                     data.ObjectId,
@@ -161,7 +158,7 @@ namespace Maple.AzureValley.Metadata
         {
             foreach (var ptrItem in items.Data)
             {
-              //  _ = ptrItem.Name;
+               _ = ptrItem.Name;
                 _ = ptrItem.Description;
                 return;
             }

@@ -25,8 +25,24 @@ namespace Maple.AzureValley.GameService
 
         protected sealed override async ValueTask LoadGameDataAsync()
         {
-            var gameEnv = await  this.MonoTaskAsync(p => p.GetAzureValleyEnvironment()).ConfigureAwait(false);
+            var gameEnv = await this.MonoTaskAsync(p => p.GetAzureValleyEnvironment()).ConfigureAwait(false);
             await this.UITaskAsync(static (p, args) => args.FirstLoadResource(), gameEnv).ConfigureAwait(false);
+
+            var task0 = this.MonoTaskAsync(static (p, args) => args.LoadAutoUnlocks(), gameEnv);
+            var task1 = this.MonoTaskAsync(static (p, args) => args.LoadBuffs(), gameEnv);
+            var task2 = this.MonoTaskAsync(static (p, args) => args.LoadConstants(), gameEnv);
+            var task3 = this.MonoTaskAsync(static (p, args) => args.LoadConstructibles(), gameEnv);
+            var task4 = this.MonoTaskAsync(static (p, args) => args.LoadFoods(), gameEnv);
+            var task5 = this.MonoTaskAsync(static (p, args) => args.LoadHints(), gameEnv);
+            var task6 = this.MonoTaskAsync(static (p, args) => args.LoadInventoryItems(), gameEnv);
+            var task7 = this.MonoTaskAsync(static (p, args) => args.LoadPerks(), gameEnv);
+            var task8 = this.MonoTaskAsync(static (p, args) => args.LoadRecipes(), gameEnv);
+            var task9 = this.MonoTaskAsync(static (p, args) => args.LoadTokens(), gameEnv);
+            var taskA = this.MonoTaskAsync(static (p, args) => args.LoadWorldItems(), gameEnv);
+            await foreach (var task in Task.WhenEach(task0, task1, task2, task3, task4, task5, task6, task7, task8, task9, taskA).ConfigureAwait(false))
+            {
+                await task.ConfigureAwait(false);
+            }
 
         }
 
@@ -40,51 +56,6 @@ namespace Maple.AzureValley.GameService
             return gameEnv.IsLoadSaveData() ? gameEnv : GameException.ThrowIfNotLoaded<AzureValleyEnvironment>();
 
         }
-
-        public sealed override async ValueTask<GameSessionInfoDTO> LoadResourceAsync()
-        {
-            var gameEnv = await this.GetAzureValleyEnvironmentThrowIfNotLoaded().ConfigureAwait(false);
-
-            //MonoDefaultLogger.Default.LogInformation("LoadAutoUnlocks");
-            //await this.MonoTaskAsync(static (p, args) => args.LoadAutoUnlocks(), gameEnv);
-
-            MonoDefaultLogger.Default.LogInformation("LoadBuffs");
-            await this.MonoTaskAsync(static (p, args) => args.LoadBuffs(), gameEnv);
-
-            //MonoDefaultLogger.Default.LogInformation("LoadConstants");
-            //await this.MonoTaskAsync(static (p, args) => args.LoadConstants(), gameEnv);
-
-            //MonoDefaultLogger.Default.LogInformation("LoadConstructibles");
-            //await this.MonoTaskAsync(static (p, args) => args.LoadConstructibles(), gameEnv);
-
-            MonoDefaultLogger.Default.LogInformation("LoadFoods");
-            await this.MonoTaskAsync(static (p, args) => args.LoadFoods(), gameEnv);
-
-            //MonoDefaultLogger.Default.LogInformation("LoadHints");
-            //await this.MonoTaskAsync(static (p, args) => args.LoadHints(), gameEnv);
-
-            MonoDefaultLogger.Default.LogInformation("LoadInventoryItems");
-            await this.MonoTaskAsync(static (p, args) => args.LoadInventoryItems(), gameEnv);
-
-            MonoDefaultLogger.Default.LogInformation("LoadPerks");
-            await this.MonoTaskAsync(static (p, args) => args.LoadPerks(), gameEnv);
-
-            MonoDefaultLogger.Default.LogInformation("LoadRecipes");
-            await this.MonoTaskAsync(static (p, args) => args.LoadRecipes(), gameEnv);
-
-            MonoDefaultLogger.Default.LogInformation("LoadTokens");
-            await this.MonoTaskAsync(static (p, args) => args.LoadTokens(), gameEnv);
-
-            MonoDefaultLogger.Default.LogInformation("LoadWorldItems");
-            await this.MonoTaskAsync(static (p, args) => args.LoadWorldItems(), gameEnv);
-            //await foreach (var task in Task.WhenEach(task1, task2, task3, task4, task5, task6, task7, task8, task9, taskA).ConfigureAwait(false))
-            //{
-            //    await task.ConfigureAwait(false);
-            //}
-            return await base.LoadResourceAsync().ConfigureAwait(false);
-        }
-
-
 
     }
 }
