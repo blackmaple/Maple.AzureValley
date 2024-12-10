@@ -4,7 +4,7 @@ using Maple.MonoGameAssistant.WebApi;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace Maple.TstdGame.GameService
+namespace Maple.AzureValley.GameService
 {
     internal static partial class AzureValleyGameExtensions
     {
@@ -14,7 +14,7 @@ namespace Maple.TstdGame.GameService
         {
             _ = RunWebApiServiceAsync();
 
-            static async Task RunWebApiServiceAsync(int millisecondsDelay = 15 * 1000)
+            static async Task RunWebApiServiceAsync(int millisecondsDelay = 25 * 1000)
             {
 
                 var webapp = WebApiServiceExtensions.AsRunWebApiService(static p =>
@@ -48,4 +48,8 @@ namespace Maple.TstdGame.GameService
         public static partial bool InitDllMain(nint hModule, uint ul_reason_for_call, nint lpReserved);
 
     }
+
+
+
+
 }

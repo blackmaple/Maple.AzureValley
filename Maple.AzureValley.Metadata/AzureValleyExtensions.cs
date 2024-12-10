@@ -144,11 +144,11 @@ namespace Maple.AzureValley.Metadata
                     DisplayDesc = ptrItem.Description,
                     DisplayCategory = ptrItem.Type.ToString(),
                 };
-                @this.Logger.LogInformation("{id}=>{name}=>{desc}=>{category}",
-                    data.ObjectId,
-                    data.DisplayName,
-                    data.DisplayDesc,
-                    data.DisplayCategory);
+                //@this.Logger.LogInformation("{id}=>{name}=>{desc}=>{category}",
+                //    data.ObjectId,
+                //    data.DisplayName,
+                //    data.DisplayDesc,
+                //    data.DisplayCategory);
                 yield return data;
 
 
@@ -165,6 +165,7 @@ namespace Maple.AzureValley.Metadata
                 return;
             }
         }
+
 
 
 
@@ -239,7 +240,6 @@ namespace Maple.AzureValley.Metadata
             }
             return false;
         }
-
         public static GameInventoryInfoDTO UpdateGameInventoryInfo(this AzureValleyEnvironment @this, GameInventoryModifyDTO modifyDTO)
         {
             if (@this.TryGetInventoryDbItem(modifyDTO.InventoryObject, out var itemsData))
@@ -253,7 +253,17 @@ namespace Maple.AzureValley.Metadata
 
                 return new GameInventoryInfoDTO() { ObjectId = modifyDTO.InventoryObject, InventoryCount = modifyDTO.InventoryCount };
             }
-            return GameException.Throw<GameInventoryInfoDTO>($"NOT FOUND:{modifyDTO.InventoryObject}");
+            return new GameInventoryInfoDTO() { ObjectId = modifyDTO.InventoryObject, InventoryCount = -1 };
+        }
+        public static void SetAllGameInventoryInfo(this AzureValleyEnvironment @this)
+        {
+
+            foreach (var itemType in @this.Ptr_GameData.INVENTORY_ITEMS_DB.DATA_ARRAY)
+            {
+                @this.Ptr_PlayerInventory.GIVE_PLAYER_ITEM_00(itemType, 1);
+            }
+
+             
         }
 
 

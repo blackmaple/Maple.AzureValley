@@ -2,6 +2,7 @@
 
 namespace Maple.AzureValley.Metadata
 {
+
     public interface IGameItem<T_GameItemData> where T_GameItemData : unmanaged, IGameItemData
     {
         PMonoArray<T_GameItemData> Data { get; }

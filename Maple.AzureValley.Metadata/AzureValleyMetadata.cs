@@ -16,6 +16,7 @@ typeof(MonoCollectorClassInfo)
     [MonoCollectorType(typeof(GameData))]
 
     [MonoCollectorType(typeof(InventoryItems))]
+    [MonoCollectorType(typeof(InventoryItemsExtensions))]
     [MonoCollectorType(typeof(InventoryItemsData))]
 
     [MonoCollectorType(typeof(Recipes))]
