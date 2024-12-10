@@ -4,6 +4,7 @@ using Maple.MonoGameAssistant.GameDTO;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using static Maple.AzureValley.Metadata.InventoryItem;
 
 namespace Maple.AzureValley.Metadata
 {
@@ -242,14 +243,21 @@ namespace Maple.AzureValley.Metadata
         }
         public static GameInventoryInfoDTO UpdateGameInventoryInfo(this AzureValleyEnvironment @this, GameInventoryModifyDTO modifyDTO)
         {
-            if (@this.TryGetInventoryDbItem(modifyDTO.InventoryObject, out var itemsData))
+            if (@this.TryGetInventoryDbItem(modifyDTO.InventoryObject, out var itemType))
             {
                 if (@this.TryGetPlayerInventoryItem(modifyDTO.InventoryObject, out var itemStack))
                 {
                     @this.Ptr_PlayerInventory.TAKE_ITEM_FROM_PLAYER_00(itemStack.ITEM, itemStack.AMOUNT, false);
                 }
-                @this.Ptr_PlayerInventory.GIVE_PLAYER_ITEM_00(itemsData, modifyDTO.InventoryCount);
-                 
+                var gc_item = @this.Metadata.InventoryItem.GCNew<InventoryItem.Ptr_InventoryItem>(false);
+                var ptr_InventoryItem = gc_item.Target;
+                ptr_InventoryItem.CTOR_01(itemType, nint.Zero);
+                var ptr_variation = ptr_InventoryItem.VARIATION;
+                ptr_variation.XP = 5;
+                ptr_variation.LEVEL = 5;
+
+                @this.Ptr_PlayerInventory.GIVE_PLAYER_ITEM_01(ptr_InventoryItem, modifyDTO.InventoryCount);
+
 
                 return new GameInventoryInfoDTO() { ObjectId = modifyDTO.InventoryObject, InventoryCount = modifyDTO.InventoryCount };
             }
@@ -263,7 +271,7 @@ namespace Maple.AzureValley.Metadata
                 @this.Ptr_PlayerInventory.GIVE_PLAYER_ITEM_00(itemType, 1);
             }
 
-             
+
         }
 
 
